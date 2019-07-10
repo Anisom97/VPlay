@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:textSize="28dp"
+        android:text="WELCOME TO VPLAY"
+        android:gravity="center_horizontal"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:hint="Enter ID"
+        android:gravity="center_horizontal"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="270dp"
+        android:hint="Enter password"
+        android:gravity="center_horizontal"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_above="@+id/skipTextView"
+        android:layout_marginBottom="5dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/skipTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Skip"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="340dp"
+        android:text="Sign Up?"
+        android:textSize="18dp"
+        android:layout_marginLeft="15dp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="340dp"
+        android:text="Forgot password?"
+        android:textSize="18dp"
+        android:layout_marginLeft="260dp"
+        android:textStyle="bold|italic" />
+
+</RelativeLayout>
