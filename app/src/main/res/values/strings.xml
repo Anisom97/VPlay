@@ -1,4 +1,35 @@
 <resources>
+
     <string name="app_name">VPlay</string>
+
+    /*Admin register string file*/
     <string name="nameEtA">Name/club name/complex name</string>
+    <string name="emailEtA">Email id</string>
+    <string name="phoneEtA">Phone number</string>
+    <string name="locationEtA">Location/Place</string>
+    <string name="landmarkEtA">Landmark</string>
+    <string name="detailsEtA">Details</string>
+    <string name="passwordEtA">Password</string>
+
+    /*Team register string file*/
+    <string name="teamnameEtT">Team Name</string>
+    <string name="membersEtT">Number of members (5/7/11)</string>
+    <string name="captainEtT">Captain Name</string>
+    <string name="emailEtT">Email id</string>
+    <string name="phoneEtT">Phone Number</string>
+    <string name="placeEtT">Place</string>
+    <string name="sportsEtT">Sports (Read T C before entering)*</string>
+    <string name="passwordEtT">Password</string>
+
+    /*Player register string file*/
+    <string name="playernameEtP">Player Name</string>
+    <string name="phoneEtP">Phone Number</string>
+    <string name="emailEtP">Email Id</string>
+    <string name="passwordEtP">Password</string>
+    <string name="placeEtP">Place</string>
+    <string name="sportsEtP">Sports (Read T C before entering)</string>
+    <string name="experienceEtP">Experience</string>
+    <string name="title_activity_adminmainpage">adminmainpage</string>
+
 </resources>
+

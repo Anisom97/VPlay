@@ -22,7 +22,8 @@
         android:hint="Player Name"
         android:gravity="center_horizontal"
         android:layout_marginLeft="20dp"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:id="@+id/playernameEtP"/>
 
     <EditText
         android:layout_width="370dp"
@@ -31,7 +32,8 @@
         android:hint="Phone Number"
         android:layout_marginLeft="20dp"
         android:gravity="center_horizontal"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:id="@+id/phoneEtP"/>
 
     <EditText
         android:layout_width="370dp"
@@ -40,7 +42,8 @@
         android:hint="Email Id"
         android:gravity="center_horizontal"
         android:layout_marginLeft="20dp"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:id="@+id/emailEtP"/>
 
     <EditText
         android:layout_width="370dp"
@@ -49,7 +52,8 @@
         android:hint="Password"
         android:gravity="center_horizontal"
         android:layout_marginLeft="20dp"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:id="@+id/passwordEtP"/>
 
     <EditText
         android:layout_width="370dp"
@@ -58,7 +62,8 @@
         android:hint="Place"
         android:gravity="center_horizontal"
         android:layout_marginLeft="20dp"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:id="@+id/placeEtP"/>
 
     <EditText
         android:layout_width="370dp"
@@ -67,24 +72,26 @@
         android:hint="Sports (Read T C before entering)"
         android:gravity="center_horizontal"
         android:layout_marginLeft="20dp"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:id="@+id/sportsEtP"/>
 
     <EditText
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="450dp"
-        android:hint="Experince"
+        android:hint="Experience"
         android:gravity="center_horizontal"
         android:layout_marginLeft="20dp"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:id="@+id/experienceEtP"/>
 
     <Button
-        android:id="@+id/register"
+        android:id="@+id/registerBtP"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_above="@+id/skipTextView"
         android:layout_marginTop="660dp"
-        android:text="Register"
+        android:text="Register Player"
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="20dp" />

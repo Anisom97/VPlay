@@ -14,7 +14,7 @@
         android:text="Registration"
         android:gravity="center_horizontal"
         android:textSize="50dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/registerAdminRBt"

@@ -20,20 +20,106 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 
+/*public class signupadmin extends AppCompatActivity {
+
+    /*String tname,temail,tphone,tlocation,tlandmark,tdetails,tpassword;
+
+    EditText name, email, phone, location, landmark, details, password;
+    Button adminrergister, button;
+
+    public static final String DB_URL = "jdbc:mysql://192.168.43.181/anirban";;
+    public static final String USER = "mrsom";
+    public static final String PASS= "Anisom97";
+
+    /*static {
+        DB_URL = "jdbc:mysql://192.168.43.181/anirban";
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_signupadmin);
+
+        name = (EditText) findViewById(R.id.nameEtA);
+        email = (EditText) findViewById(R.id.emailEtA);
+        phone = (EditText) findViewById(R.id.phoneEtA);
+        location = (EditText) findViewById(R.id.locationEtA);
+        landmark = (EditText) findViewById(R.id.landmarkEtA);
+        details = (EditText) findViewById(R.id.detailsEtA);
+        password = (EditText) findViewById(R.id.passwordEtA);
+
+        adminrergister = (Button) findViewById(R.id.registerBtA);
+
+        adminrergister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Send ObjSend = new Send();
+                ObjSend.execute("");
+
+            }
+        });
+    }
+
+    private class Send extends AsyncTask <String, String, String> {
+
+        String msg="";
+
+        String tname= name.getText().toString();
+        String temail= email.getText().toString();
+        String tphone= phone.getText().toString();
+        String tlocation= location.getText().toString();
+        String tlandmark= landmark.getText().toString();
+        String tdetails= details.getText().toString();
+        String tpassword= password.getText().toString();
+
+
+        protected String doInBackground(String... strings){
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+                 if(conn == null){
+                     Toast.makeText(signupadmin.this, "connection failed", Toast.LENGTH_LONG).show();
+                 }
+                 else {
+                     String query="INSERT into admintest (name,email,phone,location,landmark,details,password) VALUES ('"+tname+"','"+temail+"','"+tphone+"','"+tlocation+"','"+tlandmark+"','"+tdetails+"','"+tpassword+"')";
+                     Statement stmt= conn.createStatement();
+                     stmt.executeUpdate(query);
+                     Toast.makeText(signupadmin.this, "data inserted successfully", Toast.LENGTH_LONG).show();
+                 }
+                 conn.close();
+
+            } catch (Exception e) {
+                Toast.makeText(signupadmin.this, "data not inserted", Toast.LENGTH_LONG).show();
+                e.printStackTrace();
+            }
+            return msg;
+        }
+
+
+    }
+
+
+}*/
+
+
 public class signupadmin extends AppCompatActivity {
 
-    String ServerURL = "http://localhost/admintest1Get_data.php" ;
+    String ServerURL = "http://192.168.43.181/admintest1Get_data.php" ;
 
     String tname,temail,tphone,tlocation,tlandmark,tdetails,tpassword;
 
     EditText name, email, phone, location, landmark, details, password;
     Button button;
 
-    @Override
+   @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signupadmin);
@@ -82,6 +168,7 @@ public class signupadmin extends AppCompatActivity {
                 String LandmarkHolder = landmark ;
                 String DetailsHolder = details ;
                 String PasswordHolder = password ;
+                //String ServerURL = "http://localhost/admintest1Get_data.php" ; //added once again
 
                 List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 

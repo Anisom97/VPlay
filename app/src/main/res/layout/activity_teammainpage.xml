@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".teammainpage">
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="45dp"
+        android:text="Welcome team:"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/teamnameTM"/>
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="45dp"
+        android:text="No. of members:"
+        android:layout_marginTop="80dp"
+        android:textSize="25dp"/>
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="45dp"
+        android:text="Captain name:"
+        android:textSize="25dp"
+        android:layout_marginTop="120dp"/>
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="45dp"
+        android:text="Email Id:"
+        android:textSize="25dp"
+        android:layout_marginTop="160dp"/>
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="45dp"
+        android:text="Phone no.:"
+        android:textSize="25dp"
+        android:layout_marginTop="200dp"/>
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="45dp"
+        android:text="Place:"
+        android:textSize="25dp"
+        android:layout_marginTop="240dp"/>
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="45dp"
+        android:text="Sports:"
+        android:textSize="25dp"
+        android:layout_marginTop="280dp"/>
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="80dp"
+        android:id="@+id/noofmembersTM"/>
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="120dp"
+        android:id="@+id/captainTM"/>
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="160dp"
+        android:id="@+id/emailTM"/>
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="200dp"
+        android:id="@+id/phoneTM"/>
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="240dp"
+        android:id="@+id/placeTM"/>
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="280dp"
+        android:id="@+id/sportsTM"/>
+
+
+
+</RelativeLayout>

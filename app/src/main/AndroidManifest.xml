@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.vplay">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,9 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".playerRegister"></activity>
+        <activity android:name=".playermainpage"></activity>
+        <activity android:name=".adminmainpage" />
+        <activity android:name=".teammainpage" />
+        <activity android:name=".playerRegister" />
         <activity android:name=".teamRegister" />
-        <activity android:name=".signupAdmin" />
+        <activity android:name=".signupadmin" />
         <activity android:name=".signin" />
         <activity android:name=".MainActivity">
             <intent-filter>
