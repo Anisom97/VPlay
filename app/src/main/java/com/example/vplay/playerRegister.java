@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,10 +24,11 @@ import java.io.IOException;
 import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class playerRegister extends AppCompatActivity {
 
-    String ServerURL = "http://192.168.43.181/playertest2Get_data.php";
+    String ServerURL = Constants.TEST_URL + "/playertest2Get_data.php";
 
     String playernameR,phoneR,emailR,passwordR,placeR,sportsR,experienceR;
     EditText name,phone,email,password,place,sports,experience;
@@ -57,75 +59,66 @@ public class playerRegister extends AppCompatActivity {
         });
     }
 
-        public void getdataplayer() {
-            playernameR=name.getText().toString();
-            phoneR=phone.getText().toString();
-            emailR=email.getText().toString();
-            passwordR=password.getText().toString();
-            placeR=place.getText().toString();
-            sportsR=sports.getText().toString();
-            experienceR=experience.getText().toString();
-        }
-
-        public void insertdataplayer(final String name, final String phone, final String email,
-                                      final String password, final String place, final String sports, final String experience) {
-
-            class SendPostReqAsyncTask extends AsyncTask<String, Void, String> {
-                @Override
-                protected String doInBackground(String... params){
-
-                    String nameHolder = name;
-                    String phoneHolder = phone;
-                    String emailHolder = email;
-                    String passwordHolder = password;
-                    String placeHolder = place;
-                    String sportsHolder = sports;
-                    String experienceHolder = experience;
-
-                    List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-
-                    nameValuePairs.add(new BasicNameValuePair("name", nameHolder));
-                    nameValuePairs.add(new BasicNameValuePair("phone", phoneHolder));
-                    nameValuePairs.add(new BasicNameValuePair("email", emailHolder));
-                    nameValuePairs.add(new BasicNameValuePair("password", passwordHolder));
-                    nameValuePairs.add(new BasicNameValuePair("place", placeHolder));
-                    nameValuePairs.add(new BasicNameValuePair("sports", sportsHolder));
-                    nameValuePairs.add(new BasicNameValuePair("experience", experienceHolder));
-
-                    try {
-
-                        HttpClient httpClient = new DefaultHttpClient();
-
-                        HttpPost httpPost = new HttpPost(ServerURL);
-
-                        httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-
-                        HttpResponse httpResponse = httpClient.execute(httpPost);
-
-                        HttpEntity httpEntity = httpResponse.getEntity();
-
-
-                    } catch (ClientProtocolException e) {
-
-                    } catch (IOException e) {
-
-                    }
-                    return "Data Inserted Successfully";
-                }
-                @Override
-                protected void onPostExecute(String result){
-
-                    super.onPostExecute(result);
-
-                    Toast.makeText(playerRegister.this,"Data Submitted Successfully", Toast.LENGTH_LONG).show();
-                }
-            }
-
-            SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();
-
-            sendPostReqAsyncTask.execute(name,phone,email,password,place,sports,experience);
-
-        }
-
+    public void getdataplayer() {
+        playernameR=name.getText().toString();
+        phoneR=phone.getText().toString();
+        emailR=email.getText().toString();
+        passwordR=password.getText().toString();
+        placeR=place.getText().toString();
+        sportsR=sports.getText().toString();
+        experienceR=experience.getText().toString();
     }
+
+    public void insertdataplayer(final String name, final String phone, final String email,
+                                  final String password, final String place, final String sports, final String experience) {
+
+        SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();
+        sendPostReqAsyncTask.execute(name,phone,email,password,place,sports,experience);
+    }
+
+    class SendPostReqAsyncTask extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... params){
+
+            String[] keys= {
+                    "name", "phone", "email", "password", "place", "sports", "experience"
+            };
+
+            List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+
+            int i = 0;
+            for (String key: keys)
+                nameValuePairs.add(new BasicNameValuePair(key, params[i++]));
+
+            try {
+
+                HttpClient httpClient = new DefaultHttpClient();
+
+                HttpPost httpPost = new HttpPost(ServerURL);
+
+                httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+                HttpResponse httpResponse = httpClient.execute(httpPost);
+
+                HttpEntity httpEntity = httpResponse.getEntity();
+                Scanner sc = new Scanner(httpEntity.getContent());
+                while(sc.hasNext())
+                    Log.d("VPlay", sc.nextLine());
+
+            } catch (ClientProtocolException e) {
+
+            } catch (IOException e) {
+
+            }
+            return "Data Inserted Successfully";
+        }
+        @Override
+        protected void onPostExecute(String result){
+
+            super.onPostExecute(result);
+
+            Toast.makeText(playerRegister.this,"Data Submitted Successfully", Toast.LENGTH_LONG).show();
+        }
+    }
+}
 

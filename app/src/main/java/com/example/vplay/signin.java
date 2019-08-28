@@ -6,10 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class signin extends AppCompatActivity {
     EditText emailid, passwordL;
     Button loginButton;
+    RadioGroup rg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +26,14 @@ public class signin extends AppCompatActivity {
 
         loginButton=(Button)findViewById(R.id.loginButton);
 
+        final List<Integer> radioButtonList = Arrays.asList(
+                R.id.admin,
+                R.id.team,
+                R.id.player
+        );
+
+        rg = findViewById(R.id.signinType);
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,7 +43,7 @@ public class signin extends AppCompatActivity {
 
                 String type = "login";
                 BackgroundWorker backgroundWorker = new BackgroundWorker(signin.this);
-                backgroundWorker.execute(type, username, password);
+                backgroundWorker.execute(type, username, password, "" + radioButtonList.indexOf(rg.getCheckedRadioButtonId()));
 
             }
         });

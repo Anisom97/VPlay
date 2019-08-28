@@ -1,99 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".playerRegister">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="40dp"
-        android:text="Welcome to Player Sign Up page"
-        android:gravity="center_horizontal"
-        android:textSize="25dp"
-        android:textStyle="bold"/>
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:hint="Player Name"
-        android:gravity="center_horizontal"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:id="@+id/playernameEtP"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:text="Welcome to Player Sign Up page"
+            android:gravity="center_horizontal"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
 
-    <EditText
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:hint="Phone Number"
-        android:layout_marginLeft="20dp"
-        android:gravity="center_horizontal"
-        android:textSize="20dp"
-        android:id="@+id/phoneEtP"/>
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:hint="Player Name"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:id="@+id/playernameEtP"/>
 
-    <EditText
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:hint="Email Id"
-        android:gravity="center_horizontal"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:id="@+id/emailEtP"/>
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:hint="Phone Number"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_horizontal"
+            android:textSize="20dp"
+            android:id="@+id/phoneEtP"/>
 
-    <EditText
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:hint="Password"
-        android:gravity="center_horizontal"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:id="@+id/passwordEtP"/>
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:hint="Email Id"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:id="@+id/emailEtP"/>
 
-    <EditText
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
-        android:hint="Place"
-        android:gravity="center_horizontal"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:id="@+id/placeEtP"/>
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:hint="Password"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:id="@+id/passwordEtP"/>
 
-    <EditText
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:hint="Sports (Read T C before entering)"
-        android:gravity="center_horizontal"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:id="@+id/sportsEtP"/>
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="350dp"
+            android:hint="Place"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:id="@+id/placeEtP"/>
 
-    <EditText
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="450dp"
-        android:hint="Experience"
-        android:gravity="center_horizontal"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:id="@+id/experienceEtP"/>
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:hint="Sports (Read T C before entering)"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:id="@+id/sportsEtP"/>
 
-    <Button
-        android:id="@+id/registerBtP"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_above="@+id/skipTextView"
-        android:layout_marginTop="660dp"
-        android:text="Register Player"
-        android:textAllCaps="false"
-        android:textColor="#000000"
-        android:textSize="20dp" />
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="450dp"
+            android:hint="Experience"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:id="@+id/experienceEtP"/>
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/registerBtP"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_above="@+id/skipTextView"
+            android:layout_marginTop="660dp"
+            android:text="Register Player"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+    </RelativeLayout>
+</ScrollView>

@@ -117,7 +117,7 @@ import java.util.List;
 
 public class teamRegister extends AppCompatActivity {
 
-    String ServerURL = "http://192.168.43.181/teamtest1Get_data.php" ;
+    String ServerURL = Constants.TEST_URL + "/teamtest1Get_data.php" ;
 
     String tteamname, tnumberofmembers, tcaptainname, temail, tphoneno, tplace, tsports, tpassword;
 

@@ -112,7 +112,7 @@ import java.util.List;
 
 public class signupadmin extends AppCompatActivity {
 
-    String ServerURL = "http://192.168.43.181/admintest1Get_data.php" ;
+    String ServerURL = Constants.TEST_URL + "/admintest1Get_data.php" ;
 
     String tname,temail,tphone,tlocation,tlandmark,tdetails,tpassword;
 
