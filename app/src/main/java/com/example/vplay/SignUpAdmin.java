@@ -20,14 +20,11 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 
-/*public class signupadmin extends AppCompatActivity {
+/*public class SignUpAdmin extends AppCompatActivity {
 
     /*String tname,temail,tphone,tlocation,tlandmark,tdetails,tpassword;
 
@@ -86,18 +83,18 @@ import java.util.List;
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
                  if(conn == null){
-                     Toast.makeText(signupadmin.this, "connection failed", Toast.LENGTH_LONG).show();
+                     Toast.makeText(SignUpAdmin.this, "connection failed", Toast.LENGTH_LONG).show();
                  }
                  else {
                      String query="INSERT into admintest (name,email,phone,location,landmark,details,password) VALUES ('"+tname+"','"+temail+"','"+tphone+"','"+tlocation+"','"+tlandmark+"','"+tdetails+"','"+tpassword+"')";
                      Statement stmt= conn.createStatement();
                      stmt.executeUpdate(query);
-                     Toast.makeText(signupadmin.this, "data inserted successfully", Toast.LENGTH_LONG).show();
+                     Toast.makeText(SignUpAdmin.this, "data inserted successfully", Toast.LENGTH_LONG).show();
                  }
                  conn.close();
 
             } catch (Exception e) {
-                Toast.makeText(signupadmin.this, "data not inserted", Toast.LENGTH_LONG).show();
+                Toast.makeText(SignUpAdmin.this, "data not inserted", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
             return msg;
@@ -110,7 +107,7 @@ import java.util.List;
 }*/
 
 
-public class signupadmin extends AppCompatActivity {
+public class SignUpAdmin extends AppCompatActivity {
 
     String ServerURL = Constants.TEST_URL + "/admintest1Get_data.php" ;
 
@@ -206,7 +203,7 @@ public class signupadmin extends AppCompatActivity {
 
                 super.onPostExecute(result);
 
-                Toast.makeText(signupadmin.this, "Data Submit Successfully", Toast.LENGTH_LONG).show();
+                Toast.makeText(SignUpAdmin.this, "Data Submit Successfully", Toast.LENGTH_LONG).show();
 
             }
         }

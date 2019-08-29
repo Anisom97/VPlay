@@ -21,12 +21,11 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
 import java.io.IOException;
-import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class playerRegister extends AppCompatActivity {
+public class PlayerRegister extends AppCompatActivity {
 
     String ServerURL = Constants.TEST_URL + "/playertest2Get_data.php";
 
@@ -117,7 +116,7 @@ public class playerRegister extends AppCompatActivity {
 
             super.onPostExecute(result);
 
-            Toast.makeText(playerRegister.this,"Data Submitted Successfully", Toast.LENGTH_LONG).show();
+            Toast.makeText(PlayerRegister.this,"Data Submitted Successfully", Toast.LENGTH_LONG).show();
         }
     }
 }

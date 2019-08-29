@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class teammainpage extends AppCompatActivity {
+public class AdminMainPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teammainpage);
+        setContentView(R.layout.activity_adminmainpage);
     }
 }

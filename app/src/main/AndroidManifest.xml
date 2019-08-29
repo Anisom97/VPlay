@@ -12,13 +12,13 @@
         android:supportsRtl="true"
         android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/AppTheme">
-        <activity android:name=".playermainpage"></activity>
-        <activity android:name=".adminmainpage" />
-        <activity android:name=".teammainpage" />
-        <activity android:name=".playerRegister" />
-        <activity android:name=".teamRegister" />
-        <activity android:name=".signupadmin" />
-        <activity android:name=".signin" />
+        <activity android:name=".PlayerMainPage"></activity>
+        <activity android:name=".AdminMainPage" />
+        <activity android:name=".TeamMainPage" />
+        <activity android:name=".PlayerRegister" />
+        <activity android:name=".TeamRegister" />
+        <activity android:name=".SignUpAdmin" />
+        <activity android:name=".SignInPage" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

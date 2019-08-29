@@ -54,14 +54,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void RegisterAdminNavigate(){
-        startActivity(new Intent(this, signupadmin.class));
+        startActivity(new Intent(this, SignUpAdmin.class));
     }
     public void RegisterTeamNavigate(){
-        startActivity(new Intent(this, teamRegister.class));
+        startActivity(new Intent(this, TeamRegister.class));
     }
     public void RegisterPlayerNavigate(){
-        startActivity(new Intent(this, playerRegister.class));
+        startActivity(new Intent(this, PlayerRegister.class));
     }
-    public void signinpageNavigate() { startActivity(new Intent(this,signin.class)); }
+    public void signinpageNavigate() { startActivity(new Intent(this, SignInPage.class)); }
 
 }

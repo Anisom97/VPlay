@@ -11,7 +11,7 @@ import android.widget.RadioGroup;
 import java.util.Arrays;
 import java.util.List;
 
-public class signin extends AppCompatActivity {
+public class SignInPage extends AppCompatActivity {
     EditText emailid, passwordL;
     Button loginButton;
     RadioGroup rg;
@@ -42,7 +42,7 @@ public class signin extends AppCompatActivity {
                 String password= passwordL.getText().toString();
 
                 String type = "login";
-                BackgroundWorker backgroundWorker = new BackgroundWorker(signin.this);
+                BackgroundWorker backgroundWorker = new BackgroundWorker(SignInPage.this);
                 backgroundWorker.execute(type, username, password, "" + radioButtonList.indexOf(rg.getCheckedRadioButtonId()));
 
             }

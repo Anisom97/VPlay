@@ -20,14 +20,11 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 
-/*public class teamRegister extends AppCompatActivity {
+/*public class TeamRegister extends AppCompatActivity {
 
     /*String tname,temail,tphone,tlocation,tlandmark,tdetails,tpassword;*/
 
@@ -91,18 +88,18 @@ import java.util.List;
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
                 if(conn == null){
-                    Toast.makeText(teamRegister.this, "connection failed", Toast.LENGTH_LONG).show();
+                    Toast.makeText(TeamRegister.this, "connection failed", Toast.LENGTH_LONG).show();
                 }
                 else {
                     String query="INSERT into teamtest (teamname,members,captainname,email,phone,place,sports,password) VALUES ('"+tteamname+"','"+tnumberofmembers+"','"+tcaptain+"','"+temail+"','"+tphoneno+"','"+tplace+"','"+tsports+"',"+tpassword+"')";
                     Statement stmt= conn.createStatement();
                     stmt.executeUpdate(query);
-                    Toast.makeText(teamRegister.this, "data inserted successfully", Toast.LENGTH_LONG).show();
+                    Toast.makeText(TeamRegister.this, "data inserted successfully", Toast.LENGTH_LONG).show();
                 }
                 conn.close();
 
             } catch (Exception e) {
-                Toast.makeText(teamRegister.this, "data not inserted", Toast.LENGTH_LONG).show();
+                Toast.makeText(TeamRegister.this, "data not inserted", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
             return msg;
@@ -115,7 +112,7 @@ import java.util.List;
 }*/
 
 
-public class teamRegister extends AppCompatActivity {
+public class TeamRegister extends AppCompatActivity {
 
     String ServerURL = Constants.TEST_URL + "/teamtest1Get_data.php" ;
 
@@ -214,7 +211,7 @@ public class teamRegister extends AppCompatActivity {
 
                 super.onPostExecute(result);
 
-                Toast.makeText(teamRegister.this, "Data Submit Successfully", Toast.LENGTH_LONG).show();
+                Toast.makeText(TeamRegister.this, "Data Submit Successfully", Toast.LENGTH_LONG).show();
 
             }
         }
