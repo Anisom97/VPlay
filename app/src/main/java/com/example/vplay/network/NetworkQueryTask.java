@@ -1,6 +1,7 @@
 package com.example.vplay.network;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -83,7 +84,7 @@ public class NetworkQueryTask extends AsyncTask<String, Void, List<String>> {
             else if (Constants.SERVER_QUERY_ERROR.equals(s.get(s.size() - 1)))
                 networkResponse = new NetworkResponse(NetworkResponse.QUERY_ERROR, s.subList(0, s.size() - 1));
 
-            else networkResponse = new NetworkResponse();
+            else networkResponse = new NetworkResponse(NetworkResponse.QUERY_SUCCESS, s);
 
             onNetworkQueryCompletionListener.onNetworkQueryCompleted(networkResponse);
         }
@@ -105,11 +106,12 @@ public class NetworkQueryTask extends AsyncTask<String, Void, List<String>> {
             List<String> response = new ArrayList<>();
 
             while (sc.hasNext()) response.add(sc.next());
+            Log.d("VPlay", response.toString());
 
             return response;
         }
-        catch (ClientProtocolException ignored) {}
-        catch (IOException ignored) {}
+        catch (ClientProtocolException ignored) { ignored.printStackTrace(); }
+        catch (IOException ignored) { ignored.printStackTrace(); }
 
         return null;
     }
